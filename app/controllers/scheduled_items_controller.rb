@@ -64,6 +64,6 @@ class ScheduledItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def scheduled_item_params
-      params.require(:scheduled_item).permit(:current_cost, :current_price, :description)
+      params.require(:scheduled_item).permit(:current_cost, :current_price, :description, :item_id, :schedule_id)
     end
 end

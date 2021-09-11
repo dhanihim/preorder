@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_open %>
-    <%= form.datetime_select :date_open %>
+    <%= form.date_select :date_open, {order: [:day, :month, :year]}, {class: "form-control", style:"display:inline-block; width:30%; margin:auto;"} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_close %>
-    <%= form.datetime_select :date_close %>
+     <%= form.date_select :date_close, {order: [:day, :month, :year]}, {class: "form-control", style:"display:inline-block; width:30%; margin:auto;"} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-primary' %>
   </div>
 <% end %>
