@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scheduled Items</h1>
+
+<br>
+<div class='table-responsive'>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Current cost</th>
+      <th>Current price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scheduled_items.each do |scheduled_item| %>
+      <tr>
+        <td><%= scheduled_item.current_cost %></td>
+        <td><%= scheduled_item.current_price %></td>
+        <td><%= scheduled_item.description %></td>
+        <td><%= link_to 'Show', scheduled_item %></td>
+        <td><%= link_to 'Edit', edit_scheduled_item_path(scheduled_item) %></td>
+        <td><%= link_to 'Destroy', scheduled_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Scheduled Item', new_scheduled_item_path %>

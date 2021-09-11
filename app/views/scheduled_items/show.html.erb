@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Current cost:</strong>
+  <%= @scheduled_item.current_cost %>
+</p>
+
+<p>
+  <strong>Current price:</strong>
+  <%= @scheduled_item.current_price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @scheduled_item.description %>
+</p>
+
+<%= link_to 'Edit', edit_scheduled_item_path(@scheduled_item) %> |
+<%= link_to 'Back', scheduled_items_path %>

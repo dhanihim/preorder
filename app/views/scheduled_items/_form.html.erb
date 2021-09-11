@@ -1,0 +1,32 @@
+<%= form_with(model: scheduled_item) do |form| %>
+  <% if scheduled_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scheduled_item.errors.count, "error") %> prohibited this scheduled_item from being saved:</h2>
+
+      <ul>
+        <% scheduled_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :current_cost %>
+    <%= form.number_field :current_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_price %>
+    <%= form.number_field :current_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
