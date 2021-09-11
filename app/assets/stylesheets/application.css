@@ -39,3 +39,7 @@
   height: 60px;
   object-fit: cover;
 }
+
+.table td, .table th {
+  vertical-align: middle;
+}

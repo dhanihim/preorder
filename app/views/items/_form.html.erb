@@ -11,32 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
+  <div class="form-group">
     <%= form.file_field :image %>
   </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.text_field :name, class:'form-control', placeholder:'Nama item' %>
   </div>
 
-  <div class="field">
-    <%= form.label :cost %>
-    <%= form.number_field :cost %>
+  <div class="form-group">
+    <%= form.number_field :cost, class:'form-control', placeholder:'Harga pokok' %>
   </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+  <div class="form-group">
+    <%= form.number_field :price, class:'form-control', placeholder:'Harga jual' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="form-group">
+    <%= form.text_field :description, class:'form-control', placeholder:'Deskripsi' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-primary' %>
   </div>
 <% end %>
